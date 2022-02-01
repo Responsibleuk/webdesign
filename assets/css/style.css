@@ -1,41 +1,207 @@
-.bg-img {
-    /* The image used */
-    background: url(../images/hero/hero-home.jpg) no-repeat center center;
-  
-    height: 85vh;
-  width: 100%;
-  object-fit: contain;
-  overflow: hidden;
-  
-    /* Needed to position the navbar */
-    position: relative;
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+    /* dark shades of primary color*/
+    --clr-primary-1: hsl(206, 81%, 8%);
+    --clr-primary-2: hsl(205, 90%, 23%);
+    --clr-primary-3: hsl(205, 74%, 48%);
+    /* darkest grey - used for headings */
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(210, 23%, 91%);
+    --clr-white: #fff;
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-coral: hsl(16, 100, 66);
+    --ff-primary: "Montserrat", sans-serif;
+    --ff-secondary: "Merriweather", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --light-shadow: 2px 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 5px 15px 25px rgba(0, 0, 0, 0.5);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+    --background: rgba(255, 255, 255, 0.8)
   }
+  /*
+  =============== 
+  Global Styles
+  ===============
+  */
   
-  /* Position the navbar container inside the image */
-  .container {
-    position: absolute;
-    width: 100%;
+  *,
+  ::after,
+  ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  
-  /* The navbar */
-  .topnav {
-    overflow: hidden;
-    background-color: transparent;
+  body {
+    font-family: var(--ff-secondary);
+    background: black;
+    color: var(--clr-white);
+    line-height: 1.5;
   }
-  
-  /* Navbar links */
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+  ul {
+    list-style-type: none;
+  }
+  a {
     text-decoration: none;
-    font-size: 17px;
+    color: white;
   }
   
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+  img {
+    width: 100%;
+    display: block;
+  }
+  
+  h1,
+  h2 {
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: var(--ff-primary);
+}
+  h3,
+  h4 {
+    font-size: 2.5rem;
+    letter-spacing: var(--spacing);
+    text-transform: uppercase;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: var(--ff-primary);
   }
 
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 0.875rem;
+  }
+  p {
+   
+    font-size: 1rem;
+    color: var(clr-grey-1);
+    margin-bottom: 1rem;
+  }
+
+  main {
+    min-height: 100vh;
+  }
+
+  @media screen and (min-width: 800px) {
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    h3 {
+      font-size: 1rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+    body {
+      font-size: 1rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: 1;
+    }
+  }
+  
+/*
+=============== 
+Nav Bar
+===============
+*/
+
+
+.logo {
+	height: 10vh;
+  max-width: 20vw;
+  object-fit: contain;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (min-width: 800px) {
+	.nav-center {
+		max-width: 1170px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem;
+	}
+
+	.nav-header {
+		padding: 0;
+	}
+	.nav-toggle {
+		display: none;
+	}
+	.menu {
+		height: auto;
+		display: flex;
+	}
+	.menu a {
+		padding: 0;
+		margin: 0 0.5rem;
+	}
+	.menu a:hover {
+		padding: 0;
+		background: transparent;
+	}
+	.social-icons {
+		display: flex;
+	}
+	.social-icons a {
+		margin: 0 0.5rem;
+		color: var(--clr-primary-5);
+		transition: var(--transition);
+	}
+	.social-icons a:hover {
+		color: var(--clr-primary-7);
+	}
+} 
+
+
+
+ /*
+  =============== 
+  Hero Image
+  ===============
+  */
+
+#hero-image {
+  height: 85vh;
+  width: auto;
+  object-fit: contain;
+  overflow: hidden;
+  background: url(../images/hero/hero-home.jpg) no-repeat center center;
+}
+
+@media screen and (max-width: 968px) {
+  
+  #hero-image {
+    background: url(../images/5.jpg) no-repeat center center;
+  }
+}
 
