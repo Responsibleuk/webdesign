@@ -21,8 +21,8 @@ Variables
     --transition: all 0.3s linear;
     --spacing: 0.25rem;
     --radius: 0.5rem;
-    --light-shadow: 2px 5px 15px rgba(0, 0, 0, 0.1);
-    --dark-shadow: 5px 15px 25px rgba(0, 0, 0, 0.5);
+    --light-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 3px 6px 12px rgba(0, 0, 0, 0.5);
     --max-width: 1170px;
     --fixed-width: 620px;
     --background: rgba(255, 255, 255, 0.8)
@@ -794,7 +794,8 @@ a {
 
 /* services */
 .flex-container {
-  margin-left: 1rem;
+  margin-left: 5rem;
+  margin-bottom: 5rem;
   max-width: 100vw;
   display: flex;
   flex-wrap: wrap;
@@ -802,17 +803,30 @@ a {
 }
 
 .flex-item {
-  background: tomato;
-  padding: 5px;
-  width: 20rem;
-  height: 20rem;
-  margin: 0.5rem;
+  background: white;
   
-  line-height: 100px;
-  color: white;
-  font-weight: bold;
-  font-size: 2em;
+  width: 16rem;
+  height: 16rem;
+  margin: 1.5rem;
+  
+  color: black;
+  
+  
   text-align: center;
+  box-shadow: var( --light-shadow);
+}
+
+.flex-item h2 {
+  margin: 1rem;
+}
+
+.flex-item p {
+  margin: 1rem;
+}
+
+.flex-item:hover {
+  transform: scale(1.05);
+  box-shadow: var( --dark-shadow);
 }
 
 
