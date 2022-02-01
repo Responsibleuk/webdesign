@@ -42,8 +42,8 @@ Variables
   }
   body {
     font-family: var(--ff-secondary);
-    background: black;
-    color: var(--clr-white);
+    background: white;
+    color: black;
     line-height: 1.5;
   }
   ul {
@@ -206,6 +206,35 @@ Nav Bar
     background: url(../images/5.jpg) no-repeat center center;
   }
 }
+
+.hero-text {
+  font-size: 4rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding-top: 5rem;
+}
+
+.hero-services {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;  
+    margin-bottom: 5rem;
+    position: relative;  
+    }
+  
+  .hero-services:hover {
+  
+    transform: scale(1.05);
+  }
+  
+  .readon {
+    color: var(--clr-primary-5) 
+    }
+
 
 /* pricing */
 
@@ -757,4 +786,29 @@ a {
   .footer-content-column {
       width: 24.99%;
   }
+}
+
+
+
+/* services */
+.flex-container {
+  margin-left: 1rem;
+  max-width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.flex-item {
+  background: tomato;
+  padding: 5px;
+  width: 20rem;
+  height: 20rem;
+  margin: 0.5rem;
+  
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
 }
