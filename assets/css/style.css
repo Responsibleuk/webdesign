@@ -123,6 +123,21 @@ Variables
       line-height: 1;
     }
   }
+
+  .wrap {
+    margin: 0 -9999rem;
+  /* add back negative margin value */
+  padding: 0.25rem 9999rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.home-info {
+  background-color: transparent;
+}
+
+.home-img {
+  background-color: transparent;
+}
   
 /*
 =============== 
@@ -185,6 +200,13 @@ Nav Bar
 	}
 } 
 
+
+/* section */
+
+.section-center {
+  width: 100vw;
+  background-color: #83979b;
+}
 
 
  /*
